@@ -1,0 +1,19 @@
+<div id="place-info" style="font-family: Arial, sans-serif; max-width: 250px;">
+  <div style="display: flex; align-items: center; gap: 10px;">
+    {{#photo}}
+      <img src="{{photo}}" alt="Image du lieu" style="width: 60px; height: 60px; object-fit: cover; border-radius: 5px;" />
+    {{/photo}}
+    {{^photo}}
+      <div style="width: 60px; height: 60px; background: #ccc; border-radius: 5px;"></div> <!-- Placeholder si aucune photo n'est disponible -->
+    {{/photo}}
+    <div>
+      <strong>{{name}}</strong><br>
+      <span style="color: #777; font-size: 0.9em;">{{type}}</span>
+    </div>
+  </div>
+  <hr style="border: 0; height: 1px; background: #ddd; margin: 10px 0;">
+  <div style="font-size: 0.9em; color: #555;">
+    {{address}}<br>
+    {{city}}, {{postalCode}}
+  </div>
+</div>
